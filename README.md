@@ -8,8 +8,6 @@ A fast, accurate, and private medical information chatbot powered by **Retrieval
 - Beautiful web interface with **Streamlit**
 - Never hallucinates: if it doesn’t know, it says “I don’t know”
 
-Live demo: https://your-username-medical-chatbot-rag.streamlit.app (quand tu le déploieras)
-
 ## Features
 
 - PDF → Text chunks → FAISS vector store
@@ -22,19 +20,33 @@ Live demo: https://your-username-medical-chatbot-rag.streamlit.app (quand tu le 
 ## Project Structure
 medical_chatbot_rag/
 │
+
 ├── data/                              # ← Put your medical PDFs here
+
 │   └── The_GALE_ENCYCLOPEDIA_of_MEDICINE_SECOND.pdf
+
 │
+
 ├── vectorstore/
+
 │   └── db_faiss/                      # ← Created automatically
+
 │       ├── index.faiss
+
 │       └── index.pkl
+
 │
+
 ├── create_memory_for_llm.py           # Step 1: Build the vector database (run once or when PDFs change)
+
 ├── connect_memory_with_llm.py         # CLI version (quick testing)
+
 ├── medibot.py                         # Streamlit web app (main interface)
+
 ├── .env                               # Your secrets (never commit!)
+
 ├── .gitignore
+
 └── README.md
 
 
